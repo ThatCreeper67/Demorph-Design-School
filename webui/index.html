@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>demorph â€” Design intelligence</title>
+  <link rel="stylesheet" href="/assets/app.css">
+  <script src="/assets/uncertainty.js" defer></script>
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="/" aria-label="demorph home"><span class="mark">d</span><span>demorph<span class="wordmark-light"> / design school</span></span></a>
+    <div class="topbar-right"><span class="local-label"><span class="local-dot"></span>LOCAL WORKSPACE</span><div id="healthPill" class="health-pill" role="status"><span class="health-dot"></span><span id="healthText">Checking Ollamaâ€¦</span></div></div>
+  </header>
+
+  <div class="shell">
+    <aside class="rail">
+      <div class="rail-heading"><span>WORKSPACE</span><button id="newAnalysisBtn" class="text-button" type="button">+ New</button></div>
+      <button id="navNew" class="nav-item selected" type="button"><span class="nav-icon">ï¼‹</span>New analysis</button>
+      <div class="history-heading"><span>RECENT ANALYSES</span><span id="historyCount" class="count">0</span></div>
+      <div id="historyList" class="history-list"><p class="muted small rail-empty">Your completed analyses will appear here.</p></div>
+      <div class="rail-footer"><span class="privacy-icon">âŒ‚</span><div><strong>Stays on this device</strong><small>Images and results are stored locally.</small></div></div>
+    </aside>
+
+    <main class="main-content">
+      <section class="page-heading">
+        <div><p class="eyebrow">DESIGN INTELLIGENCE Â· PRIVATE BY DEFAULT</p><h1>See how the design <em>works.</em></h1><p class="subtitle">Upload a poster to explore its visual relationships, hierarchy, and opportunities.</p></div>
+        <span class="model-tag">QWEN3.5 <span>9B</span></span>
+      </section>
+
+      <div class="workspace-grid">
+        <section class="input-column" aria-label="Image input">
+          <div class="panel upload-panel">
+            <div class="panel-heading"><div><span class="step-number">01</span><h2>Your design</h2></div><button id="removeImageBtn" class="icon-button hidden" type="button" aria-label="Remove selected image" title="Remove image">Ã—</button></div>
+            <input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp,.png,.jpg,.jpeg,.webp" hidden>
+            <div id="dropZone" class="drop-zone" tabindex="0" role="button" aria-label="Choose an image or drop it here">
+              <div id="emptyUpload" class="drop-empty"><div class="upload-glyph"><span>â†‘</span></div><strong>Drop your design here</strong><span>or <button id="browseBtn" class="inline-link" type="button">browse files</button></span><small>PNG, JPG, WEBP Â· up to <span id="uploadLimit">25</span> MB</small></div>
+              <div id="previewWrap" class="preview-wrap hidden"><img id="imagePreview" alt="Selected design preview"><div class="preview-overlay"><span>PREVIEW</span><button id="replaceBtn" type="button">Replace image</button></div></div>
+            </div>
+            <div id="fileInfo" class="file-info hidden"><span class="file-type-icon">IMG</span><div class="file-details"><strong id="fileName"></strong><span id="fileMeta"></span></div><button id="changeFileBtn" class="text-button" type="button">Change</button></div>
+            <p id="uploadError" class="inline-error hidden" role="alert"></p>
+            <label for="briefInput" class="brief-label">DESIGN BRIEF <span>OPTIONAL</span></label>
+            <textarea id="briefInput" maxlength="3000" rows="3" placeholder="What should this design communicate? Include audience or context if known."></textarea>
+            <p class="brief-note">A brief helps distinguish the designâ€™s intended priority from what appears most prominent.</p>
+            <button id="analyzeBtn" class="primary-button" type="button" disabled><span>Analyze design</span><span class="button-arrow">â†—</span></button>
+            <p class="privacy-note">Your original image is preserved and analyzed locally.</p>
+          </div>
+
+          <div class="panel how-panel"><p class="eyebrow">THE ANALYSIS</p><div class="how-step"><span>01</span><p><strong>Observe</strong><small>Visual evidence and element roles</small></p></div><div class="how-step"><span>02</span><p><strong>Connect</strong><small>Hierarchy, contrast, and composition</small></p></div><div class="how-step"><span>03</span><p><strong>Evaluate</strong><small>Impact and useful next steps</small></p></div></div>
+        </section>
+
+        <section class="results-column" aria-label="Design analysis" aria-live="polite">
+          <div id="welcomeState" class="welcome-state panel"><div class="welcome-mark">d<span>â†—</span></div><p class="eyebrow">A MORE THOUGHTFUL READ</p><h2>Every element has a relationship.</h2><p>Start with a design to see how its choices work together â€” from the first point of attention to the details that support it.</p><div class="welcome-rule"></div><div class="welcome-foot"><span>01 / OBSERVE</span><span>02 / CONNECT</span><span>03 / EVALUATE</span></div></div>
+          <div id="progressState" class="panel progress-panel hidden"><div class="progress-top"><div class="spinner"></div><div><p class="eyebrow">ANALYSIS IN PROGRESS</p><h2 id="progressTitle">Preparing your imageâ€¦</h2></div></div><p id="progressDetail" class="progress-detail">The local analysis will appear here when Qwen finishes.</p><button id="cancelBtn" class="secondary-button" type="button">Cancel analysis</button><p id="cancelHint" class="muted small hidden">The active model call cannot be interrupted; its result will be discarded when it returns.</p></div>
+          <div id="errorState" class="panel error-panel hidden" role="alert"><span class="error-symbol">!</span><p class="eyebrow">ANALYSIS DID NOT COMPLETE</p><h2 id="errorTitle">Something went wrong.</h2><p id="errorMessage"></p><button id="retryBtn" class="secondary-button" type="button">Try again</button></div>
+          <div id="resultState" class="result-state hidden"></div>
+        </section>
+      </div>
+      <footer class="page-footer"><span>demorph design school</span><span>LOCAL Â· UNREVIEWED ANALYSIS</span></footer>
+    </main>
+  </div>
+</body>
+</html>

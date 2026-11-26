@@ -1,0 +1,107 @@
+# Python
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+
+# Ollama
+# None needed — Ollama data is runtime, not repo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Historical reports are excluded below; maintained documentation stays eligible.
+
+# Local application uploads, history database, and diagnostics
+local_app_data/
+.local-app-test-*/
+
+# Temporary files (already cleaned)
+# ANALYSIS.md, verify_fix.py, test_*.py (duplicates), run_v12.py, step1_qwen.py
+# qwen_raw.txt, output.txt, pipeline_*.txt, debug_*.txt
+
+# Rights-unreviewed project image collection and derivatives
+/designs/original/
+/designs/processed/
+/cache/
+/phase5_pilot_outputs/
+
+# Local Python environments and generated scratch files
+.venv/
+venv/
+env/
+ENV/
+*.tmp
+*.temp
+*.bak
+*.log
+*.log.*
+/tmp/
+/temp/
+
+# Generated annotation and review data; retain schemas, workflows, modules, and examples
+/annotations/drafts/
+/annotations/reviewed/
+/annotations/reviewed_test_backup/
+/annotations/**/generated/
+/annotations/**/outputs/
+
+# Dataset-specific metadata and model outputs; retain evaluation rubrics and code
+/evaluation/predictions/
+/evaluation/datasets/
+/manifests/
+
+# Local secrets and machine-specific configuration
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.template
+*.local
+*.local.*
+local.settings.json
+secrets.json
+credentials.json
+id_rsa*
+id_ed25519*
+*.pem
+*.p12
+*.pfx
+.netrc
+.git-credentials
+.pypirc
+.npmrc
+*.key
+**/*pending_provenance*
+**/*dataset_metadata*
+/.pytest_temp/
+# Historical root-level reports and audits (maintained guides remain eligible)
+/CODEBASE_CLEANUP_REPORT.md
+/FINAL_ACCEPTANCE_AUDIT.md
+/FINAL_AGENT_COMPLETION_REPORT.md
+/FINAL_REPORT.md
+/IMPLEMENTATION_MATRIX.md
+/OPEN_SOURCE_READINESS_REPORT.md
+/PERFORMANCE_COMPLETION_REPORT.md
+/PERFORMANCE_OPTIMIZATION_REPORT.md
+/PHASE2_BASELINE.md
+/PHASE2_FINAL_COMPLETION_REPORT.md
+/PHASE2_FINAL_REPORT.md
+/PHASE2_WORKSTREAMS_SUMMARY.md
+/PHASE3_AGENT_COMPLETION_REPORT.md
+/PHASE3_ARCHITECTURE_AUDIT.md
+/PHASE4_5_QUALITY_REFINEMENT_REPORT.md
+/PHASE4_QUALITY_REPORT.md
+/PHASE5_DESIGN_INTELLIGENCE_REPORT.md
+/QWEN_OUTPUT_RELIABILITY_COMPLETION_REPORT.md
+/RELEASE_READINESS_COMPLETION_REPORT.md
+/RELIABILITY_REPORT.md
+/USABILITY_REPORT.md
+/reports/

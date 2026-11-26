@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "demorph Design Ontology additive extension",
+  "version": "1.1.0",
+  "extends": "design_ontology.json@1.0.0",
+  "description": "Additive vocabulary for evidence provenance and detailed appearance claims. The v1.0 ontology remains unchanged.",
+  "properties": {
+    "claim_sources": {
+      "type": "array",
+      "items": {"type": "string", "enum": ["direct_observation", "model_inference", "human_interpretation", "brief_derived", "unknown"]}
+    },
+    "uncertainty_levels": {
+      "type": "array",
+      "items": {"type": "string", "enum": ["low", "medium", "high", "unknown", "ambiguous", "not_applicable"]}
+    },
+    "hierarchy_kinds": {
+      "type": "array",
+      "items": {"type": "string", "enum": ["intended_priority", "apparent_attention_prediction", "measured_viewer_attention", "unknown"]}
+    },
+    "typography_observations": {
+      "type": "array",
+      "items": {"type": "string", "enum": ["classification", "personality_hypothesis", "pairing", "scale", "weight", "tracking", "leading", "line_length", "wrapping", "legibility", "readability", "contrast", "exact_font_identity_unverified"]}
+    },
+    "appearance_observations": {
+      "type": "array",
+      "items": {"type": "string", "enum": ["hue_relationship", "harmony", "contrast", "saturation", "temperature", "lighting", "texture", "atmosphere", "contextual_symbolism_hypothesis"]}
+    },
+    "judgement_kinds": {
+      "type": "array",
+      "items": {"type": "string", "enum": ["objective_measurement", "brief_dependent_judgement", "subjective_interpretation", "unknown"]}
+    }
+  },
+  "required": ["claim_sources", "uncertainty_levels", "hierarchy_kinds", "typography_observations", "appearance_observations", "judgement_kinds"],
+  "additionalProperties": false
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "curriculum_source": "design_curriculum.md",
+  "curriculum_source_version": "1.0",
+  "ontology_source": "design_ontology.json",
+  "ontology_source_version": "1.0.0",
+  "entries": [
+    {"knowledge_id":"visual-literacy-v1","module_id":"visual_literacy","title":"Visual Literacy","path":"curriculum/modules/01_visual_literacy_v1.0.md","summary":"Observe visual elements and distinguish direct observation from inference.","keywords":["observe","text","photography","illustration","shape","texture","background","evidence","uncertainty"],"curriculum_refs":["Level 1 — Visual literacy"]},
+    {"knowledge_id":"design-components-v1","module_id":"design_components","title":"Design Components","path":"curriculum/modules/02_design_components_v1.0.md","summary":"Classify element type, identity, and functional design role separately.","keywords":["component","role","headline","hero","callout","branding","decoration","caption","CTA"],"curriculum_refs":["Level 2 — Design component literacy"]},
+    {"knowledge_id":"visual-hierarchy-v1","module_id":"visual_hierarchy","title":"Visual Hierarchy","path":"curriculum/modules/03_visual_hierarchy_v1.0.md","summary":"Compare intended priority with apparent visual attention using evidence.","keywords":["hierarchy","priority","primary","secondary","attention","weight","reading order","focal point"],"curriculum_refs":["Level 3 — Hierarchy and attention"]},
+    {"knowledge_id":"composition-v1","module_id":"composition","title":"Composition","path":"curriculum/modules/04_composition_v1.0.md","summary":"Explain spatial relationships and composition principles in context.","keywords":["balance","alignment","grid","margin","spacing","negative space","flow","overlap","layering","crop"],"curriculum_refs":["Level 4 — Design principles and composition"]},
+    {"knowledge_id":"typography-v1","module_id":"typography","title":"Typography","path":"curriculum/modules/05_typography_v1.0.md","summary":"Analyze typographic roles, relationships, legibility, and uncertainty.","keywords":["typeface","font","pairing","scale","weight","tracking","leading","line length","wrapping","readability"],"curriculum_refs":["Level 4 — Design principles and composition"]},
+    {"knowledge_id":"colour-appearance-v1","module_id":"colour_appearance","title":"Colour and Appearance","path":"curriculum/modules/06_colour_appearance_v1.0.md","summary":"Separate measurable color and appearance properties from contextual interpretation.","keywords":["colour","color","harmony","contrast","saturation","temperature","lighting","texture","atmosphere"],"curriculum_refs":["Level 4 — Design principles and composition"]},
+    {"knowledge_id":"design-judgement-v1","module_id":"design_judgement","title":"Design Judgement","path":"curriculum/modules/07_design_judgement_v1.0.md","summary":"Evaluate communication and execution against purpose with separate dimensions.","keywords":["clarity","audience","consistency","readability","purpose","suitability","aesthetic coherence","rubric"],"curriculum_refs":["Level 5 — Design critique"]},
+    {"knowledge_id":"design-critique-v1","module_id":"design_critique","title":"Design Critique","path":"curriculum/modules/08_design_critique_v1.0.md","summary":"Make evidence-linked critiques and targeted recommendations with trade-offs.","keywords":["strengths","weaknesses","improvements","recommendation","evidence","trade-off","uncertainty","preference"],"curriculum_refs":["Levels 5–6 — Design critique; creative reasoning and revision"]}
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "demorph Design Ontology",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "component_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "headline",
+          "title",
+          "subtitle",
+          "deck",
+          "body_copy",
+          "caption",
+          "quote",
+          "call_to_action",
+          "date_time",
+          "venue",
+          "price",
+          "contact_info",
+          "logo",
+          "brand_mark",
+          "hero_image",
+          "supporting_image",
+          "product_image",
+          "person",
+          "illustration",
+          "icon",
+          "badge",
+          "label",
+          "data_visualization",
+          "navigation",
+          "interface_control",
+          "shape",
+          "pattern",
+          "ornament",
+          "texture",
+          "border",
+          "divider",
+          "frame",
+          "background",
+          "other",
+          "unknown"
+        ]
+      }
+    },
+    "design_roles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "primary_message",
+          "secondary_message",
+          "supporting_information",
+          "hero_subject",
+          "brand_identification",
+          "conversion_action",
+          "navigation_or_wayfinding",
+          "proof_or_credibility",
+          "decoration",
+          "structural_container",
+          "visual_texture",
+          "functional_data",
+          "other",
+          "unknown"
+        ]
+      }
+    },
+    "hierarchy_levels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "primary",
+          "secondary",
+          "tertiary",
+          "utility",
+          "decorative",
+          "unknown"
+        ]
+      }
+    },
+    "principles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "contrast",
+          "alignment",
+          "proximity",
+          "repetition",
+          "balance",
+          "proportion",
+          "scale",
+          "rhythm",
+          "unity",
+          "variety",
+          "emphasis",
+          "hierarchy",
+          "negative_space",
+          "grid",
+          "legibility",
+          "readability",
+          "typographic_consistency",
+          "colour_harmony",
+          "visual_flow",
+          "crop_and_framing",
+          "layering",
+          "consistency",
+          "accessibility",
+          "other",
+          "not_applicable"
+        ]
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "aligned_with",
+          "grouped_with",
+          "contrasts_with",
+          "overlaps",
+          "contains",
+          "inside",
+          "adjacent_to",
+          "above",
+          "below",
+          "left_of",
+          "right_of",
+          "leads_to",
+          "supports",
+          "competes_with",
+          "repeats",
+          "balances",
+          "frames",
+          "connects_to",
+          "other"
+        ]
+      }
+    },
+    "composition_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "centered",
+          "symmetrical",
+          "asymmetrical",
+          "diagonal",
+          "radial",
+          "editorial_grid",
+          "modular_grid",
+          "split_layout",
+          "full_bleed",
+          "layered_collage",
+          "typographic",
+          "minimal",
+          "other",
+          "unknown"
+        ]
+      }
+    },
+    "evidence_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "visible_text",
+          "pixel_region",
+          "relative_size",
+          "position",
+          "alignment",
+          "spacing",
+          "contrast",
+          "colour",
+          "shape",
+          "overlap",
+          "repetition",
+          "brief_constraint",
+          "human_context",
+          "other"
+        ]
+      }
+    }
+  },
+  "required": [
+    "component_types",
+    "design_roles",
+    "hierarchy_levels",
+    "principles",
+    "relationships",
+    "composition_types",
+    "evidence_types"
+  ],
+  "additionalProperties": false
+}

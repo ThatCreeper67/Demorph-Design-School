@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Design School human preference comparison",
+  "version":"1.0.0",
+  "type":"object",
+  "required":["schema_version","preference_id","source_image_id","prompt","preferred_answer","rejected_answer","reason_for_preference","evidence_ids","annotation_version","reviewer_status","reviewer_id_or_role","created_at"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"},
+    "preference_id":{"type":"string"},
+    "source_image_id":{"type":"string"},
+    "prompt":{"type":"string"},
+    "preferred_answer":{"type":"string"},
+    "rejected_answer":{"type":"string"},
+    "reason_for_preference":{"type":"string"},
+    "evidence_ids":{"type":"array","items":{"type":"string"}},
+    "annotation_version":{"type":"string"},
+    "reviewer_status":{"enum":["draft","in_review","approved","rejected"]},
+    "reviewer_id_or_role":{"type":["string","null"]},
+    "created_at":{"type":"string","format":"date-time"}
+  },
+  "additionalProperties":false
+}

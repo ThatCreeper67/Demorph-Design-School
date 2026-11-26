@@ -1,0 +1,27 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Design School reviewed correction",
+  "version":"1.0.0",
+  "type":"object",
+  "required":["schema_version","feedback_id","source_image_id","source_prediction","annotation_version","error_category","original_prediction","corrected_prediction","human_correction","explanation","preferred_alternative","rejected_alternative","reason_for_preference","reviewer_status","reviewer_id_or_role","created_at"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"},
+    "feedback_id":{"type":"string"},
+    "source_image_id":{"type":"string"},
+    "source_prediction":{"type":"string","description":"Path or stable ID for the archived baseline prediction."},
+    "annotation_version":{"type":"string"},
+    "error_category":{"enum":["incorrect_element_identification","incorrect_component_role","incorrect_hierarchy","poor_spatial_grounding","misread_typography","incorrect_colour_interpretation","unsupported_design_assumption","weak_critique","unhelpful_recommendation","missing_uncertainty"]},
+    "original_prediction":{},
+    "corrected_prediction":{},
+    "human_correction":{"type":"string"},
+    "explanation":{"type":"string"},
+    "preferred_alternative":{"type":["string","object"]},
+    "rejected_alternative":{"type":["string","object"]},
+    "reason_for_preference":{"type":"string"},
+    "evidence_ids":{"type":"array","items":{"type":"string"}},
+    "reviewer_status":{"enum":["draft","in_review","approved","rejected"]},
+    "reviewer_id_or_role":{"type":["string","null"]},
+    "created_at":{"type":"string","format":"date-time"}
+  },
+  "additionalProperties":false
+}

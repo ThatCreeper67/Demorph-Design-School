@@ -1,0 +1,15 @@
+{
+  "prompt_version": "qwen-design-baseline-v1.0",
+  "model": "qwen3.5:9b-q4_K_M",
+  "tasks": [
+    {"task_id":"visual_elements","instruction":"Inventory only clearly visible text, people, objects, illustrations, photographs, logos, shapes, textures, and background regions. Do not assign functional roles. Do not invent unreadable text or identities. Return JSON with elements: [{element_id, element_type, description, bbox_normalized_or_null, visible_evidence, uncertainty}]."},
+    {"task_id":"component_roles","instruction":"Classify likely functional design roles for visible components. Distinguish object identity from role. With no brief, mark intended purpose uncertain. Return JSON with components: [{element_id, component_type, likely_role, evidence, uncertainty}]."},
+    {"task_id":"hierarchy","instruction":"Analyze apparent visual hierarchy from the image and keep it separate from intended priority, which cannot be known without a brief. Return JSON with apparent_order: [{element_id, rank, visual_evidence}], intended_priority: unknown, rationale, uncertainty."},
+    {"task_id":"composition","instruction":"Analyze composition and spatial relationships, including alignment, balance, grouping, negative space, focal points, overlap, and flow when visible. Separate observation from interpretation. Return JSON with observations: [], relationships: [], interpretation: [], uncertainty."},
+    {"task_id":"typography","instruction":"Analyze visible typography: broad classification, scale, weight, spacing, line length, wrapping, hierarchy, contrast, and readability. Do not guess exact font identities. Do not invent illegible wording. Return JSON with observations: [], readable_text: [], unreadable_text_regions: [], strengths: [], concerns: [], uncertainty."},
+    {"task_id":"colour_appearance","instruction":"Describe visible color relationships, contrast, saturation, temperature, lighting, texture, and atmosphere. Treat symbolism as contextual and uncertain. Return JSON with observations: [], possible_contextual_readings: [], uncertainty."},
+    {"task_id":"design_principles","instruction":"Identify only design principles supported by visible evidence. Do not force every principle onto the image. Return JSON with principles: [{principle, affected_elements, evidence, interpretation, uncertainty}]."},
+    {"task_id":"critique","instruction":"Give a concise evidence-based critique. No communication brief is supplied, so do not claim purpose suitability. Separate visible strengths and potential weaknesses; mark subjective or uncertain claims. Return JSON with strengths: [{claim, evidence, element_ids, judgement_kind, uncertainty}], weaknesses: [{claim, evidence, element_ids, judgement_kind, uncertainty}]."},
+    {"task_id":"improvements","instruction":"Recommend only targeted changes tied to visible evidence. Explain expected impact and trade-offs; do not redesign by personal taste alone. No brief is supplied, so note assumptions. Return JSON with recommendations: [{change, evidence, expected_impact, trade_offs, assumption, uncertainty}]."}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "rubric_id": "design_intelligence_v1.0",
+  "scoring_dimensions": [
+    {"id":"visual_understanding","method":"deterministic element type precision/recall/F1; geometry separately where reviewed boxes exist","human_review_required":false},
+    {"id":"component_identification","method":"element type classification accuracy/F1","human_review_required":false},
+    {"id":"functional_role_classification","method":"primary-role exact accuracy and macro-F1","human_review_required":false},
+    {"id":"hierarchy_understanding","method":"Spearman/Kendall rank agreement; intended and apparent hierarchy scored separately","human_review_required":false},
+    {"id":"spatial_reasoning","method":"relationship precision/recall/F1 and box IoU when geometry is reviewed","human_review_required":false},
+    {"id":"typography_understanding","method":"reviewed claim correctness, text transcription and evidence audit","human_review_required":true},
+    {"id":"colour_understanding","method":"deterministic pixel claims separately; contextual interpretation reviewed by people","human_review_required":true},
+    {"id":"design_principle_understanding","method":"principle precision/recall/F1 plus evidence audit","human_review_required":true},
+    {"id":"communication_evaluation","method":"dimension-specific ordinal agreement against reviewed ratings","human_review_required":true},
+    {"id":"design_critique","method":"human adjudication of claim correctness, impact and usefulness","human_review_required":true},
+    {"id":"evidence_and_uncertainty_handling","method":"evidence reference coverage and human audit of grounding and uncertainty","human_review_required":true}
+  ],
+  "error_categories": ["incorrect_element_identification","incorrect_component_role","incorrect_hierarchy","poor_spatial_grounding","misread_typography","incorrect_colour_interpretation","unsupported_design_assumption","weak_critique","unhelpful_recommendation","missing_uncertainty"],
+  "rule": "Every score retains reference, prediction, evaluation method, score, explanation, and error category. Subjective dimensions are never reported as objective ground truth."
+}
